@@ -1,0 +1,393 @@
+/* Importación de tipografías desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  background-color: #F8F6F0; /* Fondo crema */
+  color: #2C2C2C;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: transparent;
+  position: absolute; /* Para que flote sobre la imagen */
+  width: 90%;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2C2C2C;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  border-bottom: 1px solid #2C2C2C;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* --- PORTADA (HERO) --- */
+.hero {
+  position: relative;
+  height: 90vh;
+  /* Podés cambiar esta URL por la foto real de tu prima */
+  background-image: url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+/* Degradado sutil para que el texto se lea bien sobre cualquier foto */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to right, rgba(248, 246, 240, 0.85) 0%, rgba(248, 246, 240, 0) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: 4.5rem;
+  margin: 10px 0 0 0;
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+
+.hero-category {
+  font-size: 0.85rem;
+  letter-spacing: 8px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.hero-script {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #566454; /* Verde oliva */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #3d473b;
+}
+
+/* Texto a mano alzada en la esquina */
+.hero-nota-mano {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  z-index: 1;
+  text-align: right;
+  transform: rotate(-5deg);
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Sombra para que resalte en la foto */
+}
+
+.hero-nota-mano p {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0;
+}
+/* --- SECCIÓN: SOBRE LA CREADORA --- */
+.sobre-creadora {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 10%;
+  background-color: #F8F6F0; /* Mismo fondo crema */
+}
+
+/* Contenedor izquierdo: La Polaroid */
+.polaroid-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.polaroid {
+  background: white;
+  padding: 15px 15px 50px 15px; /* Más espacio abajo para escribir */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: rotate(-3deg); /* Le da la inclinación estilo foto suelta */
+  width: 80%;
+  max-width: 380px;
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.polaroid-text {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.2rem;
+  color: #333;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+/* Contenedor derecho: Los Textos */
+.texto-creadora {
+  flex: 1;
+}
+
+.texto-creadora h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.texto-creadora h4 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 3rem;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: #2c2c2c;
+}
+
+.texto-creadora p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+.texto-creadora .firma {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.8rem;
+  color: #2c2c2c;
+  margin-top: 40px;
+  line-height: 1;
+}
+/* --- SECCIÓN: CATÁLOGO Y CARRITO --- */
+.catalogo-section {
+  padding: 80px 10%;
+  background-color: #F8F6F0;
+}
+
+.catalogo-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.catalogo-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  letter-spacing: 6px;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.catalogo-header p {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.5rem;
+  color: #555;
+  margin: 0;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.producto-card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.producto-nombre {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: #2c2c2c;
+  margin: 0 0 10px 0;
+}
+
+.producto-precio {
+  font-family: 'Montserrat', sans-serif;
+  color: #566454;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.btn-agregar {
+  background-color: transparent;
+  color: #566454;
+  border: 1px solid #566454;
+  padding: 8px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.btn-agregar:hover {
+  background-color: #566454;
+  color: white;
+}
+
+/* El recuadro del carrito */
+.carrito-container {
+  background: white;
+  padding: 30px;
+  border: 1px solid #e0ddd5;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carrito-container h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* --- RESPONSIVE (CELULARES Y TABLETS) --- */
+@media (max-width: 768px) {
+  /* 1. Barra de navegación */
+  .navbar {
+    padding: 15px 20px;
+    width: auto;
+    right: 0;
+  }
+  
+  /* Ocultamos los links de texto en celular (luego podemos hacer un menú hamburguesa ☰) */
+  .nav-links {
+    display: none; 
+  }
+
+  /* 2. Portada (Hero) */
+  .hero {
+    padding-left: 0; /* Sacamos el margen izquierdo gigante */
+    justify-content: center; /* Centramos todo */
+    background-position: 70% center; /* Movemos la foto un poco para que se vea la vela */
+  }
+
+  .hero::before {
+    /* Hacemos el degradado un poco más oscuro en el centro para que el texto se lea bien en celu */
+    background: linear-gradient(to bottom, rgba(248, 246, 240, 0.9) 0%, rgba(248, 246, 240, 0.3) 100%);
+  }
+
+  .hero-content {
+    padding: 0 20px;
+    margin-top: -10vh; /* Lo subimos un poquito */
+  }
+
+  /* Achicamos los tamaños de letra */
+  .hero-title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-script {
+    font-size: 2rem;
+  }
+
+  /* Ocultamos la nota a mano porque en celular tapa la imagen principal */
+  .hero-nota-mano {
+    display: none; 
+  }
+}
+/* Agregalo dentro de tu @media de celulares */
+  .sobre-creadora {
+    flex-direction: column; /* Apila la foto arriba y el texto abajo */
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  
+  .polaroid {
+    transform: rotate(0deg); /* Enderezamos la foto en el celu para que entre bien */
+    width: 95%;
+  }
+  
+  .texto-creadora {
+    text-align: center;
+  }
