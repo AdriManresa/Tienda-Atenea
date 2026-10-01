@@ -1,0 +1,120 @@
+/* Importar una fuente Serif elegante para los títulos desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
+body {
+  background-color: #f4f1ea; /* Color crema de fondo */
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.tienda-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header-tienda {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-tienda h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.header-tienda p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Grilla responsive para las tarjetas */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+/* Estilos de la tarjeta */
+.tarjeta-producto {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-producto {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.categoria-producto {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #b86b53; /* Naranja/Óxido */
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.nombre-producto {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  color: #2c2c2c;
+}
+
+.descripcion-producto {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Empuja el precio y botón hacia abajo */
+}
+
+/* Fila inferior de la tarjeta (Precio + Botón) */
+.footer-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.precio-producto {
+  font-weight: 600;
+  color: #2a5a43; /* Verde oscuro */
+  font-size: 1.1rem;
+}
+
+.btn-comprar {
+  background-color: #2a5a43; /* Verde oscuro */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-comprar:hover {
+  background-color: #1e4231;
+}
